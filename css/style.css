@@ -1,0 +1,93 @@
+:root {
+    --bg-color: #f4f6f9;
+    --text-color: #333;
+    --primary-color: #0056b3;
+    --border-color: #ddd;
+    --table-header: #e9ecef;
+    --row-alt: #f8f9fa;
+    --highlight: #d4edda; /* Para depósitos compensados */
+}
+
+[data-theme="dark"] {
+    --bg-color: #1e1e24;
+    --text-color: #f4f6f9;
+    --primary-color: #4dabf7;
+    --border-color: #444;
+    --table-header: #2b2b36;
+    --row-alt: #25252e;
+    --highlight: #155724;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: transparent;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+.tab-btn.active {
+    opacity: 1;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    text-align: right;
+}
+
+th {
+    background-color: var(--table-header);
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--row-alt);
+}
+
+/* Destaque para linhas onde houve compensação */
+.linha-compensada {
+    background-color: var(--highlight) !important;
+}
