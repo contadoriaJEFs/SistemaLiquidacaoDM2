@@ -1,0 +1,9 @@
+{
+  "IPCA-E": [
+    { "competencia": "2023-01", "valor": 0.53, "fator": 1.0053 },
+    { "competencia": "2023-02", "valor": 0.84, "fator": 1.0084 }
+  ],
+  "SELIC": [
+    { "competencia": "2023-01", "valor": 1.12, "fator": 1.0112 }
+  ]
+}
